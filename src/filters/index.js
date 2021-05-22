@@ -13,7 +13,7 @@ export const FilterContext = React.createContext(null);
 function Filters({ options, customStyle, getFilterData, attributesValueURL }) {
   const [showModal, setShowModal] = useState(false);
   const [actionType, setActionType] = useState('');
-  const [attributeList, setAttributeList] = useState([]);
+  const [attributeList, setAttributeList] = useState(props.attributeData);
   const [showErrors, setShowErrors] = useState(false);
 
   const { Provider } = FilterContext;

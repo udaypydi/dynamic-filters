@@ -40,6 +40,7 @@ export default function App() {
         getFilterData={(data) => {
           console.log('get filter data in app.js', data);
         }}
+        attributeData={[]}
         customStyle={{ width: 200, background: "#fff" }}
         options={json?.data}
         attributesValueURL={'http://b2metadataapi.bamboobox.in/attribute-setup/get-combobox-data'}
