@@ -10,11 +10,12 @@ import Modal from "./modal";
 
 export const FilterContext = React.createContext(null);
 
-function Filters({ options, customStyle, getFilterData, attributesValueURL }) {
+function Filters(props) {
   const [showModal, setShowModal] = useState(false);
   const [actionType, setActionType] = useState('');
-  const [attributeList, setAttributeList] = useState(props.attributeData);
+  const [attributeList, setAttributeList] = useState(props?.attributeData);
   const [showErrors, setShowErrors] = useState(false);
+  const { options, customStyle, getFilterData, attributesValueURL } = props;
 
   const { Provider } = FilterContext;
 
